@@ -1,0 +1,7 @@
+{
+	"name": "IR-LOCAL-MACHINE",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Integracion Runtime que se conecta a mi pc local"
+	}
+}

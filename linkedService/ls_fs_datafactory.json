@@ -1,0 +1,17 @@
+{
+	"name": "ls_fs_datafactory",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\data_adf",
+			"userId": "USER",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhOWMwYjQyOC0zNzU5LTQ5NGYtYThhMC01MWMyODVhNDA1Y2EiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-LOCAL-MACHINE",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
