@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/ian.avellaneda.12@outlook.com/introduccion_spark_notebook",
+					"notebookPath": "/Users/ian.avellaneda.12@outlook.com/Transformación de Datos con Azure Databricks",
 					"baseParameters": {
 						"monto": {
 							"value": "@pipeline().parameters.monto",
