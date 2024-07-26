@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "FileSystem to Bronze",
-				"type": "Copy",
+				"name": "Transformacion Bronze to Silver",
+				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -14,56 +14,10 @@
 					"secureInput": false
 				},
 				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "FileServerReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
-					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "ds_fs_csv_datafactory",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "ds_adls_csv_datafactory",
-						"type": "DatasetReference",
-						"parameters": {
-							"container": "datalake",
-							"path": "bronze/file_system/csv",
-							"file_name": "Cliente.csv"
-						}
-					}
-				]
+				"linkedServiceName": {
+					"referenceName": "ls_ws_adb",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
