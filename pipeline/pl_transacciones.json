@@ -14,12 +14,33 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/ian.avellaneda.12@outlook.com/introduccion_spark_notebook",
+					"baseParameters": {
+						"monto": {
+							"value": "@pipeline().parameters.monto",
+							"type": "Expression"
+						},
+						"id_empresa": {
+							"value": "@pipeline().parameters.id_empresa",
+							"type": "Expression"
+						}
+					}
+				},
 				"linkedServiceName": {
 					"referenceName": "ls_ws_adb",
 					"type": "LinkedServiceReference"
 				}
 			}
 		],
+		"parameters": {
+			"monto": {
+				"type": "string"
+			},
+			"id_empresa": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
